@@ -49,7 +49,7 @@ class PostTableViewCell: UITableViewCell {
         for comment in postData.comments {
             let name = comment["name"]
             let message = comment["comment"]
-            allComment = "\(name!):\(message!)" + "\n"
+            allComment += "\(name!):\(message!)" + "\n"
         }
         self.commentLable.text = allComment
         

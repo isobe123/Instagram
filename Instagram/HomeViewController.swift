@@ -59,7 +59,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 })
                 //要素が変更されたらpostArrayからデータを削除・新しいデータを追加、tableView再表示
                 postsRef.observe(.childChanged, with: { snapshot in
-                    print("DEBUG_Print: .childChangedイベントが発生しました。")
+                    print("DEBUG_PRINT: .childChangedイベントが発生しました。")
                     
                     if let uid = Auth.auth().currentUser?.uid {
                         //PostDataクラス生成、受け取ったデータを設定
@@ -83,18 +83,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 })
                 //DatabaseのobserveEventが上記コードにより登録されたためtrueとする
                 observing = true
-            }else{
-                //ログアウトを検出したら
-                if observing == true {
-                    //テーブルをクリア
-                    postArray = []
-                    tableView.reloadData()
-                    //オブサーバーを削除
-                    let postsRef = Database.database().reference().child(Const.PostPath)
-                    postsRef.removeAllObservers()
-                    //DatabaseのobserveEventが上記コードにより解除されたためfalseとする
-                    observing = false
-                }
+            }
+            
+        }else{
+            //ログアウトを検出したら
+            if observing == true {
+                //テーブルをクリア
+                postArray = []
+                tableView.reloadData()
+                //オブサーバーを削除
+                let postsRef = Database.database().reference().child(Const.PostPath)
+                postsRef.removeAllObservers()
+                //DatabaseのobserveEventが上記コードにより解除されたためfalseとする
+                observing = false
             }
         }
     }

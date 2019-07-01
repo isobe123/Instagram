@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var displayNameTextField: UITextField!
     
     @IBAction func handleLoginButton(_ sender: Any) {
+        
         if let address = mailAddressTextField.text, let password = passwordTextField.text{
             //アドレス・パスワードに未入力がある時、エラー表示して処理終了
             if address.isEmpty || password.isEmpty {

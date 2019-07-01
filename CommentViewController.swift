@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import SVProgressHUD
 
 class CommentViewController: UIViewController {
     
@@ -25,12 +26,19 @@ class CommentViewController: UIViewController {
         let comments = ["comments":postData.comments]
         postRef.updateChildValues(comments)
         
-        self.dismiss(animated: true, completion: nil)
+        SVProgressHUD.showSuccess(withStatus: "投稿しました。")
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        textView.layer.borderColor = UIColor.orange.cgColor
+        textView.layer.borderWidth = 1
+        textView.layer.cornerRadius = 10
     }
 }

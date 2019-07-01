@@ -43,14 +43,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsO-XE-Nmr">
-                        <rect key="frame" x="26" y="398" width="268" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMh-C9-rVh">
+                        <rect key="frame" x="186" y="329" width="108" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVr-F9-RCe">
-                        <rect key="frame" x="26" y="418.5" width="268" height="20.5"/>
+                        <rect key="frame" x="26" y="399" width="268" height="40"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -63,8 +63,11 @@
                         </constraints>
                         <state key="normal" title="コメント"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMh-C9-rVh">
-                        <rect key="frame" x="186" y="328.5" width="108" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsO-XE-Nmr">
+                        <rect key="frame" x="26" y="369" width="268" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="WZD-hC-Uxo"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -86,7 +89,8 @@
                     <constraint firstItem="hVr-F9-RCe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="gHV-eu-MeI"/>
                     <constraint firstItem="pMh-C9-rVh" firstAttribute="centerY" secondItem="rDB-ih-TEl" secondAttribute="centerY" id="gve-Wy-ytc"/>
                     <constraint firstItem="DIc-MV-xUf" firstAttribute="top" secondItem="aEP-xD-pZl" secondAttribute="bottom" id="koU-41-Jxe"/>
-                    <constraint firstItem="hVr-F9-RCe" firstAttribute="top" secondItem="TsO-XE-Nmr" secondAttribute="bottom" id="lbW-qm-hI2"/>
+                    <constraint firstItem="hVr-F9-RCe" firstAttribute="top" secondItem="TsO-XE-Nmr" secondAttribute="bottom" constant="10" id="lbW-qm-hI2"/>
+                    <constraint firstItem="TsO-XE-Nmr" firstAttribute="top" secondItem="DIc-MV-xUf" secondAttribute="bottom" constant="10" id="qE2-EF-Lp6"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hVr-F9-RCe" secondAttribute="trailing" constant="10" id="sAg-xF-z2k"/>
                     <constraint firstItem="DIc-MV-xUf" firstAttribute="leading" secondItem="rDB-ih-TEl" secondAttribute="trailing" constant="10" id="w2w-hm-gX7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="TsO-XE-Nmr" secondAttribute="trailing" constant="10" id="xb5-t5-44z"/>

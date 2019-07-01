@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View" id="BYZ-38-t0r" customClass="ViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,18 +119,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6jI-I8-Pbh">
-                                <rect key="frame" x="10" y="10" width="300" height="200"/>
+                                <rect key="frame" x="10" y="40" width="300" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="0LE-Xw-vSj"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="0eZ-yW-z2R"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-RW-D2N">
-                                <rect key="frame" x="10" y="230" width="300" height="40"/>
+                                <rect key="frame" x="10" y="260" width="300" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Lhq-eP-odk"/>
                                 </constraints>
@@ -139,15 +138,28 @@
                                     <action selector="postComment:" destination="z2e-Pc-AkI" eventType="touchUpInside" id="k3q-eO-ENN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loa-Dh-Pjg">
+                                <rect key="frame" x="10" y="310" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Teq-Sx-aEU"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="z2e-Pc-AkI" eventType="touchUpInside" id="5Jk-5D-0o1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7d9-b1-Pnz" firstAttribute="trailing" secondItem="6jI-I8-Pbh" secondAttribute="trailing" constant="10" id="Ab2-QY-kIU"/>
                             <constraint firstItem="6jI-I8-Pbh" firstAttribute="leading" secondItem="7d9-b1-Pnz" secondAttribute="leading" constant="10" id="FUR-dB-yPg"/>
-                            <constraint firstItem="6jI-I8-Pbh" firstAttribute="top" secondItem="jXW-JT-G9w" secondAttribute="top" constant="10" id="JI1-Rm-YLj"/>
+                            <constraint firstItem="7d9-b1-Pnz" firstAttribute="trailing" secondItem="Loa-Dh-Pjg" secondAttribute="trailing" constant="10" id="Yan-N3-T3O"/>
                             <constraint firstItem="mXj-RW-D2N" firstAttribute="top" secondItem="6jI-I8-Pbh" secondAttribute="bottom" constant="20" id="fhu-wg-H1s"/>
+                            <constraint firstItem="Loa-Dh-Pjg" firstAttribute="leading" secondItem="7d9-b1-Pnz" secondAttribute="leading" constant="10" id="frU-qW-cSS"/>
                             <constraint firstItem="7d9-b1-Pnz" firstAttribute="trailing" secondItem="mXj-RW-D2N" secondAttribute="trailing" constant="10" id="hHH-Ol-kSp"/>
                             <constraint firstItem="mXj-RW-D2N" firstAttribute="leading" secondItem="7d9-b1-Pnz" secondAttribute="leading" constant="10" id="ib0-v1-qB3"/>
+                            <constraint firstItem="6jI-I8-Pbh" firstAttribute="top" secondItem="7d9-b1-Pnz" secondAttribute="top" constant="20" id="oYF-ai-882"/>
+                            <constraint firstItem="Loa-Dh-Pjg" firstAttribute="top" secondItem="mXj-RW-D2N" secondAttribute="bottom" constant="10" id="u6K-d4-1mq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7d9-b1-Pnz"/>
                     </view>
@@ -355,7 +367,7 @@
                     <connections>
                         <outlet property="displayNameTextField" destination="dNf-a2-P9A" id="7GY-hE-8P7"/>
                         <outlet property="mailAddressTextField" destination="PE2-rV-GFJ" id="ZwB-I0-k8q"/>
-                        <outlet property="passwordTextField" destination="dNf-a2-P9A" id="k5W-B9-6cb"/>
+                        <outlet property="passwordTextField" destination="XTG-EI-BWx" id="oGb-rh-U5J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkB-2x-KqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
